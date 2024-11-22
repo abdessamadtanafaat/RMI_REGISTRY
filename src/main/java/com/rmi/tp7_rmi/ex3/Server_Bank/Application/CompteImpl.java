@@ -13,7 +13,7 @@ public class CompteImpl extends UnicastRemoteObject implements Compte {
     }
 
     @Override
-    public void debiter(double montant) throws RemoteException {
+    public synchronized  void debiter(double montant) throws RemoteException {
         if (montant <= solde) {
             solde -= montant;
             System.out.println("Debited: " + montant + " DH. New Balance: " + solde + " DH");
@@ -24,7 +24,7 @@ public class CompteImpl extends UnicastRemoteObject implements Compte {
     }
 
     @Override
-    public void crediter(double montant) throws RemoteException{
+    public synchronized  void crediter(double montant) throws RemoteException{
         solde += montant;
         System.out.println("Credited: " + montant + " DH. New Balance: " + solde + " DH");
     }

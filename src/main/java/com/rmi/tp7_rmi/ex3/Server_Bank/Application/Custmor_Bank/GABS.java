@@ -1,4 +1,7 @@
-package com.rmi.tp7_rmi.ex3.Server_Bank.Application;
+package com.rmi.tp7_rmi.ex3.Server_Bank.Application.Custmor_Bank;
+
+import com.rmi.tp7_rmi.ex3.Server_Bank.Application.Compte;
+import com.rmi.tp7_rmi.ex3.Server_Bank.Application.Operations;
 
 import java.rmi.Naming;
 import java.util.ArrayList;
