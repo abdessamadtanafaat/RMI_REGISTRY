@@ -1,4 +1,4 @@
-package com.rmi.tp7_rmi.ex2.Server_Bank.Application;
+package com.rmi.tp7_rmi.ex3.Server_Bank.Application;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
@@ -13,7 +13,7 @@ public class CompteImpl extends UnicastRemoteObject implements Compte {
     }
 
     @Override
-    public synchronized void debiter(double montant) throws RemoteException {
+    public void debiter(double montant) throws RemoteException {
         if (montant <= solde) {
             solde -= montant;
             System.out.println("Debited: " + montant + " DH. New Balance: " + solde + " DH");
@@ -24,7 +24,7 @@ public class CompteImpl extends UnicastRemoteObject implements Compte {
     }
 
     @Override
-    public synchronized void crediter(double montant) throws RemoteException{
+    public void crediter(double montant) throws RemoteException{
         solde += montant;
         System.out.println("Credited: " + montant + " DH. New Balance: " + solde + " DH");
     }
