@@ -13,7 +13,7 @@ public class CompteClient {
             stubCompte.crediter(800.00);
             double solde = stubCompte.lireSolde();
 
-                    System.out.println("Current Balance: " + solde + " DH");
+            System.out.println("Current Balance: " + solde + " DH");
         } catch (Exception e) {
             System.out.println("Client error: " + e);
             e.printStackTrace();
